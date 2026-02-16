@@ -25,7 +25,7 @@ class StudentFactory extends Factory
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
             'email' => $this->faker->unique()->safeEmail(), // Explain: unique is used to ensure that the email is unique, faker is used to generate a random email address.
-            'password' => $this->faker->password(),
+            // 'password' => $this->faker->password(),
             'course' => $this->faker->randomElement($course),
             'year_level' => $this->faker->randomElement($year),
         ];

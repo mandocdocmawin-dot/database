@@ -21,11 +21,9 @@ class StudentFactory extends Factory
         return [
             'uuid' => Str::uuid(),
             'student_id' => 'STU' . str_pad($this->faker->unique()->numberBetween(1, 10000), 4, '0', STR_PAD_LEFT), 
-            // Explain: STU is the prefix, str_pad is used to pad the number with zeros, numberBetween is used to generate a random number between 1 and 10000, unique is used to ensure that the number is unique, faker is used to generate a random number.
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
-            'email' => $this->faker->unique()->safeEmail(), // Explain: unique is used to ensure that the email is unique, faker is used to generate a random email address.
-            // 'password' => $this->faker->password(),
+            'email' => $this->faker->unique()->safeEmail(), 
             'course' => $this->faker->randomElement($course),
             'year_level' => $this->faker->randomElement($year),
         ];

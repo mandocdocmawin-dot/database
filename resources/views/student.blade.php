@@ -96,6 +96,7 @@
     </div>
 
     <script>
+        // _method means Method Spoofing
         // 1. Open Modal and fill with data
         function openEditModal(id, firstName, lastName, email, course, yearLevel) {
             document.getElementById('edit_student_id').value = id;
